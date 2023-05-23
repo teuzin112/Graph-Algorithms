@@ -29,4 +29,4 @@ In the case of a not directed graph, the edge **_(u, v)_** will show up only onc
 
 For example, lets consider the following graph:
 
-![Graph](https://www.dropbox.com/s/xgx63wnxp8leg3p/graph.png?dl=0)
+![Graph](graph.png)
