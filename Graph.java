@@ -58,7 +58,7 @@ public class Graph {
     String line = fileInput.nextLine();
 
     boolean directed;
-    if (line.contains("sim"))
+    if (line.contains("yes"))
       directed = true;
     else
       directed = false;

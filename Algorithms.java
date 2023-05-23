@@ -111,7 +111,7 @@ public class Algorithms {
     predecessor = new int[G.getNumVertices()];
 
     if (hasNegativeWeight(G)) {
-      System.out.println("Nao eh possivel aplicar o algoritmo de Dijkstra - grafo possui arestas de peso negativo.");
+      System.out.println("It is not possible to run Dijkstra's algorithm - graph has negative weights edges");
       return;
     }
 
@@ -151,7 +151,7 @@ public class Algorithms {
     predecessor = new int[G.getNumVertices()];
 
     if (!G.isDirected()) {
-      System.out.println("Nao eh possivel aplicar o algoritmo de Bellman-Ford - grafo nao orientado.");
+      System.out.println("It is not possible to run Bellman-Ford algorithm - graph not directed");
       return false;
     }
 
@@ -176,7 +176,7 @@ public class Algorithms {
         if (distance[u] == Integer.MAX_VALUE)
           continue;
         if (distance[v.getKey()] > distance[u] + weight(u, v.getKey(), G.getAdj())) {
-          System.out.println("Ciclo de peso negativo encontrado.");
+          System.out.println("Cycle of negative weight found");
           return false;
         }
       }
@@ -199,7 +199,7 @@ public class Algorithms {
 
       if (!bellmanFord(G, u)) {
         System.out
-            .println("Nao eh possivel aplicar o algoritmo de Floyd-Warshall - grafo possui ciclo de peso negativo.");
+            .println("It is not possible to apply Floyd-Warshall algorithm - graph has cycle of negative weight");
         return;
       }
     }
@@ -257,7 +257,7 @@ public class Algorithms {
    */
   public static ArrayList<Edge> kruskal(Graph G) {
     if (G.isDirected()) {
-      System.out.println("Nao eh possivel aplicar o algoritmo de Kruskal - grafo orientado.");
+      System.out.println("It is not possible to apply Kruskal's algorithm - directed graph");
       return null;
     }
 
@@ -303,10 +303,10 @@ public class Algorithms {
       answerQ.add(b);
 
     }
-    //Cria um novo arraylist para armazenar as arestas
+    // Cria um novo arraylist para armazenar as arestas
     ArrayList<Edge> edges = new ArrayList<Edge>(answerQ.size() / 2);
 
-    //Adiciona as arestas na lista
+    // Adiciona as arestas na lista
     for (int i = 0; i < answerQ.size(); i += 2) {
       int u = answerQ.get(i);
       int v = answerQ.get(i + 1);
@@ -328,7 +328,7 @@ public class Algorithms {
    */
   public static void prim(Graph G, int src) {
     if (G.isDirected()) {
-      System.out.println("Nao eh possivel aplicar o algoritmo de Prim - grafo orientado.");
+      System.out.println("It is not possible to apply Prim's algorithm - directed graph");
       return;
     }
 
@@ -406,9 +406,9 @@ public class Algorithms {
    */
   private static void printMst(int totalWeight, int src) {
     if (src != -1)
-      System.out.println("vertice inicial: " + src);
+      System.out.println("initial vertex: " + src);
 
-    System.out.println("peso total: " + totalWeight);
+    System.out.println("total weight: " + totalWeight);
 
     while (answerQ.size() > 1)
       System.out.printf("(%d,%d) ", answerQ.poll(), answerQ.poll());
@@ -452,7 +452,7 @@ public class Algorithms {
   private static void printAllPaths(int sucessor[][], int n) {
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < n; j++) {
-        System.out.printf("caminho de %d para %d: ", i, j);
+        System.out.printf("path from %d to %d: ", i, j);
         if (i == j)
           System.out.println(i);
         else if (sucessor[i][j] == -1)
@@ -567,15 +567,15 @@ public class Algorithms {
    * @param src vertice de origem
    */
   public static void printPaths(Graph G, int src) {
-    System.out.println("origem: " + src);
+    System.out.println("source: " + src);
     for (int u = 0; u < G.getNumVertices(); u++) {
 
       if (distance[u] != Integer.MAX_VALUE) {
         if (u == src)
-          System.out.printf("destino: %d  dist: %d  caminho: %d\n", src, 0, src);
+          System.out.printf("destination: %d  distance: %d  path: %d\n", src, 0, src);
 
         else {
-          System.out.printf("destino: %d  dist: %d  caminho: ", u, distance[u]);
+          System.out.printf("destination: %d  distance: %d  path: ", u, distance[u]);
           getPath(src, u);
           System.out.print(src + " - ");
           while (answerQ.size() > 1)

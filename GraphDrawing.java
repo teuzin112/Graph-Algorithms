@@ -8,9 +8,10 @@ public class GraphDrawing {
 	/**
 	 * Gera um pdf com a imagem do grafo g recebido como parametro
 	 * 
-	 * @param fileName nome do arquivo de saida
-	 * @param g        grafo a ser desenhado
-	 * @param predecessor[] vetor de antecessores para pintar as arestas no algoritmo Prim
+	 * @param fileName      nome do arquivo de saida
+	 * @param g             grafo a ser desenhado
+	 * @param predecessor[] vetor de antecessores para pintar as arestas no
+	 *                      algoritmo Prim
 	 */
 	public static void drawGraphPrim(String fileName, Graph g, int predecessor[]) {
 		G = g;
@@ -24,7 +25,7 @@ public class GraphDrawing {
 		// Arquivo de saida com o grafo
 		File outputFile = new File(fileName + ".pdf");
 		gv.writeGraphToFile(gv.getGraph(gv.getDotSource(), "pdf"), outputFile);
-		System.out.println(outputFile + " gerado com sucesso");
+		System.out.println(outputFile + " succesfully generated");
 	}
 
 	/**
@@ -33,7 +34,9 @@ public class GraphDrawing {
 	 * =7];3->0[label =2];3->2[label =8];4->2[label =19];
 	 * 
 	 * @return retorna a String para criacao da imagem
-	 * @param predecessor[]  vetor de antecessores para pintar as arestas no algoritmo Prim, pode ser NULL caso seja escolhida a opcao 8 do menu
+	 * @param predecessor[] vetor de antecessores para pintar as arestas no
+	 *                      algoritmo Prim, pode ser NULL caso seja escolhida a
+	 *                      opcao 8 do menu
 	 */
 	private static String createCommandStringPrim(int predecessor[]) {
 		String command = "";
@@ -61,9 +64,10 @@ public class GraphDrawing {
 
 	/**
 	 * Desenha o grafo g usando a lista de arestas
+	 * 
 	 * @param fileName nome do arquivo de saida
-	 * @param g 	   grafo a ser desenhado
-	 * @param mst	   lista de arestas
+	 * @param g        grafo a ser desenhado
+	 * @param mst      lista de arestas
 	 */
 	public static void drawGraphKruskal(String fileName, Graph g, ArrayList<Edge> mst) {
 		G = g;
@@ -77,12 +81,13 @@ public class GraphDrawing {
 		// Arquivo de saida com o grafo
 		File outputFile = new File(fileName + ".pdf");
 		gv.writeGraphToFile(gv.getGraph(gv.getDotSource(), "pdf"), outputFile);
-		System.out.println(outputFile + " gerado com sucesso");
+		System.out.println(outputFile + " succesfully generated");
 	}
 
 	/**
 	 * Cria a String com os parametros necessarios para desenho do grafo
-	 * @param mst	   lista de arestas
+	 * 
+	 * @param mst lista de arestas
 	 */
 	private static String createCommandStringKruskal(ArrayList<Edge> mst) {
 		String command = "";

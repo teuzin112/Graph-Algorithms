@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Menu {
 	private static Graph G;
-	// Como o arquivo pode ser alterado durante a execucao, deve ser salvo para gerar a imagem
+	// Como o arquivo pode ser alterado durante a execucao, deve ser salvo para
+	// gerar a imagem
 	private static String actualFileName;
 
 	/**
@@ -14,7 +15,7 @@ public class Menu {
 	 * @return retorna a string com o caminho para o arquivo
 	 */
 	public static String getFilePath(Scanner consoleInput) {
-		System.out.println("Nome do arquivo: ");
+		System.out.println("Complete file path with name: ");
 		String fileName = consoleInput.nextLine();
 		// Pega o caminho completo ate a classe Graph
 		String path = Graph.class.getProtectionDomain().getCodeSource().getLocation().getPath();
@@ -30,17 +31,17 @@ public class Menu {
 	 */
 	public static void drawMenu(Scanner consoleInput) throws IOException {
 		while (true) {
-			System.out.println("\n[1] - Busca em profundidade");
-			System.out.println("[2] - Busca em Largura");
+			System.out.println("\n[1] - DFS");
+			System.out.println("[2] - BFS");
 			System.out.println("[3] - Dijkstra");
 			System.out.println("[4] - Bellman-Ford");
 			System.out.println("[5] - Floyd-Warshall");
 			System.out.println("[6] - Kruskal");
 			System.out.println("[7] - Prim");
-			System.out.println("[8] - Desenhar Grafo");
-			System.out.println("[9] - Mudar grafo");
-			System.out.println("[0] - Sair");
-			System.out.print("Opcao: ");
+			System.out.println("[8] - Draw graph");
+			System.out.println("[9] - Change graph");
+			System.out.println("[0] - Exit");
+			System.out.print("Option: ");
 			int opt = consoleInput.nextInt();
 			if (opt == 0)
 				break;
@@ -60,7 +61,7 @@ public class Menu {
 		Integer src = 0;
 		// Alguns algoritmos precisam de um ponto inicial, se for algum deles lê o src
 		if (option > 0 && option < 5 || option == 7) {
-			System.out.print("Vertice de origem: ");
+			System.out.print("Source vertex: ");
 			src = consoleInput.nextInt();
 		}
 		switch (option) {
@@ -118,7 +119,7 @@ public class Menu {
 		G = Graph.loadGraph(actualFileName);
 		drawMenu(consoleInput);
 		consoleInput.close();
-		System.out.println("Fechando...");
+		System.out.println("Exiting...");
 	}
 
 }
