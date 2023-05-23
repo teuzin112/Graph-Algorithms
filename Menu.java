@@ -15,7 +15,7 @@ public class Menu {
 	 * @return retorna a string com o caminho para o arquivo
 	 */
 	public static String getFilePath(Scanner consoleInput) {
-		System.out.println("Complete file path with name: ");
+		System.out.println("File name: ");
 		String fileName = consoleInput.nextLine();
 		// Pega o caminho completo ate a classe Graph
 		String path = Graph.class.getProtectionDomain().getCodeSource().getLocation().getPath();
