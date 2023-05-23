@@ -23,4 +23,4 @@ The program only loads one graph at a time through a _.txt_ file, which needs to
 
 1. **_"directed=yes_"** or **"_directed=no_"**      Indicates if the graph is directed or not. It is the first line of the file.
 2. **"_V=\<n\>_"**      Contains the number of vertices of the graph. The vertices are enumerated from **0** to **n-1**. It is the second line of the file.
-3. **"_(\<u\>, \<n\>): \<weight\>_"**     Represents the edge **_(u, v)_**
+3. **"_(\<u\>, \<n\>): \<weight\>_"**     Represents the edge **_(u, v)_** with their respective weight. **_\<u\>_** and **_\<v\>_** are integers values between **0** and **n-1**. The weight must be an integer value(it can be negative). The edges are specified starting at the third line from the file, being **_one edge per line_**.
