@@ -51,6 +51,8 @@ Download the source files and import them on your favorite IDE(I used the Eclips
 
 **Make sure to have correctly installed Graphviz**.
 
-**Important note:** on the _Menu.java_ file the ```getFilePath``` function was made to only work if you have a _src_ folder and a _bin_ folder in the same directory, it might only work for the Eclipse IDE.
+###
+**Important note** 
+On the _Menu.java_ file the ```getFilePath``` function was made to only work if you have a _src_ folder and a _bin_ folder in the same directory, it might only work for the Eclipse IDE.
 
-### **_In short terms: you will probably have to change this function if you use a IDE that is not Eclipse._**
+**_In short terms: you will probably have to change this function if you use a IDE that is not Eclipse._**
