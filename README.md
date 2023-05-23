@@ -21,5 +21,5 @@ For the functionality of drawing you will need to download and install Graphviz 
 
 The program only loads one graph at a time through a .txt file, which needs to follow this specific syntax:
 
-1. **directed=yes** or **directed=no**: indicates if the graph is directed or not. It is the first line of the file.
-2. **V=<n>**: contains the number of vertices of the graph. The vertices are enumerated from **0** to **n-1**
+1. **_directed=yes_** or **_directed=no_**: indicates if the graph is directed or not. It is the first line of the file.
+2. **_V=<n>_**: contains the number of vertices of the graph. The vertices are enumerated from **0** to **n-1**
