@@ -11,7 +11,7 @@ This project implements the following algorithms:
 - Kruskal's algorithm
 - Prim's algorithm
 
-For the functionality of drawing graphs be able to work you need to download and install Graphviz from [here]https://graphviz.org/download/
+For the functionality of drawing graphs be able to work you need to download and install Graphviz from [here](https://graphviz.org/download/).
 
 #### What is Graphviz ?
 
