@@ -30,3 +30,22 @@ In the case of a not directed graph, the edge **_(u, v)_** will show up only onc
 For example, lets consider the following graph:
 
 <img src="https://github.com/teuzin112/Graph-Algorithms/blob/main/graph.png" width="306" height="428" />
+
+Content of the file for loading the graph above:
+
+```
+directed=yes
+V=5
+(0,1):11
+(0,2):-4
+(1,3):-5
+(2,4):7
+(3,0):2
+(3,2):8
+(4,2):19
+```
+
+#### How to run
+
+Download the source files and import them on your favorite IDE(I used the Eclipse IDE for this project).
+**Make sure to have correctly installed Graphviz**.
